@@ -3,6 +3,8 @@ import { FormEvent } from 'react';
 import * as s from "./styled-form-completo"
 import {Banner} from '../../imagens';
 import Titulo from '../../componentes/Titulo';
+import { Row, ColumnInput, Label, RowSelectors, InputButton } from '../../componentes';
+
 
 const FormCompleto: React.FC = () => {
   function enviarFormulario(event: FormEvent){
@@ -40,28 +42,28 @@ alert("Cancelando...");
           <s.Aviso>
               <strong>ATENÇÃO:</strong> os campos contendo o asterisco (*) são de preenchimento obrigatório!</s.Aviso>
 
-            <div className="row">
-                <div className="column-input input-text">
-                    <label>Nome completo: *</label>
+              <Row>
+                <ColumnInput className="input-text">
+                    <Label>Nome completo: *</Label>
                     <input 
                     type="text"
                     name="nome"
                     placeholder="Digite seu nome aqui"
                     required/> {/*Campo obrigatorio*/}
-                </div>
+                </ColumnInput>
 
-            <div className="column-input">
-                <label>Idade:</label>
+              <ColumnInput>
+                <Label>Idade:</Label>
                     <input 
                     type="number"
                     name="idade"
                     placeholder="Digite sua idade"/>
-                  </div>
-              </div>
+                  </ColumnInput>
+              </Row>
 
-              <div className="row">
-                  <div className="column-input select">
-                      <label>Ocupação</label> {/*}Texto padrao do campo*/}
+              <Row>
+                  <ColumnInput className=" select">
+                      <Label>Ocupação</Label> {/*}Texto padrao do campo*/}
                       <select name="ocupacao">
                       <option>Selecione uma ocupação</option> 
                       <option>Estudante</option>     
@@ -71,69 +73,69 @@ alert("Cancelando...");
                       <option>Autônomo</option>
                       <option>Outros</option>
                       </select>
-                  </div>
+                  </ColumnInput>
 
                   {/*}Aqui continuam os inputs de seleção RADIO BUTTONS*/}   
-                  <div className="column-input">
-                      <label>Área de preferência:</label>
-                      <div className="row" style={{gap: '25px'}}> {/*A propriedade gap só funciona para itens flex*/}
-                          <div className="row-selectors">
+                  <ColumnInput>
+                      <Label>Área de preferência:</Label>
+                      <Row style={{gap: '25px'}}> {/*A propriedade gap só funciona para itens flex*/}
+                          <RowSelectors>
                               <input
                               type="radio"
                               id="front"
                               name="area-preferencia"
                               value="Front-end"
-                              //checked
+                              checked
                               />
-                          <label htmlFor="front">Front-end</label>
-                          </div>
+                          <Label htmlFor="front">Front-end</Label>
+                          </RowSelectors>
 
-                          <div className="row-selectors">
+                          <RowSelectors>
                               <input
                               type="radio"
                               id="back"
                               name="area-preferencia"
                               value="Back-end"
                               />
-                          <label htmlFor="back">Back-end</label>
-                          </div>
+                          <Label htmlFor="back">Back-end</Label>
+                          </RowSelectors>
 
-                          <div className="row-selectors">
+                          <RowSelectors>
                               <input
                               type="radio"
                               id="full"
                               name="area-preferencia"
                               value="Full Stack"
                               />
-                          <label htmlFor="full">Full Stack</label>
-                          </div>
-                      </div>
-                  </div>    
-              </div>
+                          <Label htmlFor="full">Full Stack</Label>
+                          </RowSelectors>
+                      </Row>
+                  </ColumnInput>    
+              </Row>
 
               {/*}Aqui começam os botões de text area e checkbox*/}
-              <div className="column-input">
-                  <label>Anexar Currículo</label>
-                  <input type="file" name="curriculo" multiple/> {/*Input recebe arquivo*/}
-              </div>
+              <ColumnInput>
+                  <Label>Anexar Currículo</Label>
+                  <InputButton type="file" name="curriculo"/> {/*Input recebe arquivo*/}
+              </ColumnInput>
 
-              <div className="column-input" style={{marginBottom: '50px'}}>
-              <label>Descrição do perfil do candidato:</label>
+              <ColumnInput style={{marginBottom: '50px'}}>
+              <Label>Descrição do perfil do candidato:</Label>
               <textarea name="descricao-perfil"
                   placeholder="Nos fale um pouco sobre o seu perfil profissional"></textarea>
-              </div>
+              </ColumnInput>
               
-              <div className="column-input" style={{marginBottom: '115px'}}>
+              <ColumnInput style={{marginBottom: '115px'}}>
                   <div className="row-selectors">
                       <input type="checkbox" name="receber-email" id="receber-email"/>
-                      <label htmlFor="receber-email">
-                          Desejo receber notificações sobre vagas por email.</label>
+                      <Label htmlFor="receber-email">
+                          Desejo receber notificações sobre vagas por email.</Label>
                   </div>
-              </div>   
-                  <div className="row" style={{justifyContent: 'space-between'}}>
-                      <button onClick={cancelar}>Cancelar</button>
-                      <input type="submit" value="Enviar"/>
-                  </div>      
+              </ColumnInput>   
+                  <Row style={{justifyContent: 'space-between'}}>
+                      <InputButton type="button" onClick={cancelar}value="Cancelar"/>
+                      <InputButton type="submit" value="Enviar"/>
+                  </Row>      
       </s.Formulario>
     </s.Container>
     </>
