@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormEvent } from 'react';
+import { FormEvent, useState, useEffect } from 'react';
 import * as s from "./styled-form-completo"
 import {Banner} from '../../imagens';
 import Titulo from '../../componentes/Titulo';
@@ -7,22 +7,34 @@ import { Row, ColumnInput, Label, RowSelectors, InputButton, Footer } from '../.
 
 
 const FormCompleto: React.FC = () => {
+const [nome, setNome] = useState("");
+const [idade, setIdade] = useState("");
+const [ocupacao, setOcupacao] = useState("");
+const [areaPreferencia, setAreaPreferencia] = useState("Front-end");
+const [curriculo, setCurriculo] = useState<any>("");
+const [descricaoPerfil, setDescricaoPerfil] = useState("");
+const [receberEmail, setReceberEmail] = useState(false);
+
   function enviarFormulario(event: FormEvent){
     event.preventDefault();
-    //const mensagem = `${nome}, tem ${idade} anos e atualmente é ${ocupacao}. Se ingressar no mundo do desenvolvimento, tem preferência por atuar como ${areaPreferencia}.
+    const mensagem = `${nome}, tem ${idade} anos e atualmente é ${ocupacao}. Se ingressar no mundo do desenvolvimento, tem preferência por atuar como ${areaPreferencia}.
 
-    //Em sua descrição de perfil consta: "${descricaoPerfil}".
+    Em sua descrição de perfil consta: "${descricaoPerfil}".
 
-    //Deseja receber e-mail: ${receberEmail ? "Sim" : "Não"}
-    //Currículo? ${curriculo ? curriculo.files[0].name : "Não informado"}`;
+    Deseja receber e-mail: ${receberEmail ? "Sim" : "Não"}
+    Currículo? ${curriculo ? curriculo?.name : "Não informado"}`;
 
-    //alert(mensagem);
+    alert(mensagem);
 }
 
 const cancelar =(event: FormEvent) =>{
 event.preventDefault();
 alert("Cancelando...");
 };
+
+useEffect(() => {
+    console.log("Ola")
+}, []);
 
   return (
       <>
@@ -49,7 +61,10 @@ alert("Cancelando...");
                     type="text"
                     name="nome"
                     placeholder="Digite seu nome aqui"
-                    required/> {/*Campo obrigatorio*/}
+                    required
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value) }
+                    /> {/*Campo obrigatorio*/}
                 </ColumnInput>
 
               <ColumnInput>
@@ -57,14 +72,20 @@ alert("Cancelando...");
                     <input 
                     type="number"
                     name="idade"
-                    placeholder="Digite sua idade"/>
+                    placeholder="Digite sua idade"
+                    value={idade}
+                    onChange={(e) => setIdade(e.target.value) }/>
                   </ColumnInput>
               </Row>
 
               <Row>
                   <ColumnInput className=" select">
                       <Label>Ocupação</Label> {/*}Texto padrao do campo*/}
-                      <select name="ocupacao">
+                      <select 
+                      name="ocupacao"
+                      value={ocupacao}
+                      onChange={(e) => setOcupacao(e.target.value) }
+                      >
                       <option>Selecione uma ocupação</option> 
                       <option>Estudante</option>     
                       <option>Trabalhador</option>
@@ -85,7 +106,8 @@ alert("Cancelando...");
                               id="front"
                               name="area-preferencia"
                               value="Front-end"
-                              checked
+                              checked={areaPreferencia == "Front-end"}
+                              onChange={(e) => setAreaPreferencia(e.target.value)}
                               />
                           <Label htmlFor="front">Front-end</Label>
                           </RowSelectors>
@@ -96,6 +118,8 @@ alert("Cancelando...");
                               id="back"
                               name="area-preferencia"
                               value="Back-end"
+                              checked={areaPreferencia == "Back-end"}
+                              onChange={(e) => setAreaPreferencia(e.target.value)}
                               />
                           <Label htmlFor="back">Back-end</Label>
                           </RowSelectors>
@@ -106,6 +130,8 @@ alert("Cancelando...");
                               id="full"
                               name="area-preferencia"
                               value="Full Stack"
+                              checked={areaPreferencia == "Full Stack"}
+                              onChange={(e) => setAreaPreferencia(e.target.value)}
                               />
                           <Label htmlFor="full">Full Stack</Label>
                           </RowSelectors>
@@ -116,13 +142,20 @@ alert("Cancelando...");
               {/*Aqui começam os botões de text area e checkbox*/}
               <ColumnInput>
                   <Label>Anexar Currículo</Label>
-                  <InputButton type="file" name="curriculo"/> {/*Input recebe arquivo*/}
+                  <InputButton 
+                    type="file" 
+                    name="curriculo" 
+                    //value={curriculo}
+                    onChange={(e) => setCurriculo(e.target?.files[0])} /> {/*Input recebe arquivo*/}
               </ColumnInput>
 
               <ColumnInput style={{marginBottom: '50px'}}>
               <Label>Descrição do perfil do candidato:</Label>
-              <textarea name="descricao-perfil"
-                  placeholder="Nos fale um pouco sobre o seu perfil profissional"></textarea>
+              <textarea 
+                  name="descricao-perfil"
+                  placeholder="Nos fale um pouco sobre o seu perfil profissional" 
+                  value={descricaoPerfil}
+                  onChange={(e) => setDescricaoPerfil(e.target.value)}></textarea>
               </ColumnInput>
               
               <ColumnInput style={{marginBottom: '115px'}}>
@@ -131,6 +164,8 @@ alert("Cancelando...");
                       type="checkbox" 
                       name="receber-email" 
                       id="receber-email"
+                      checked={receberEmail}
+                      onChange={() => setReceberEmail(!receberEmail)}
                       />
                       
                     <Label htmlFor="receber-email">
