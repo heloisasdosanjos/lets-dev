@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import * as s from "./styled-rowselectors";
+import * as s from "./styled-row-selectors";
 
 interface RowSelectorsProps{
   children: ReactNode;

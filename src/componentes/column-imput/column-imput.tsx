@@ -8,7 +8,7 @@ interface ColumnInputProps{
 }
 
 const ColumnInput = ({ children, style, className } : ColumnInputProps) => {
-  return(
+  return (
     <s.ColumnInput style={style} className={className}>
       {children}
     </s.ColumnInput>

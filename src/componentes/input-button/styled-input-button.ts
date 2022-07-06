@@ -5,18 +5,18 @@ interface InputButtonProps{
 }
 
 export const InputButton = styled.input<InputButtonProps>`
-  &[type="submit],
-  &::-webkit-file0upload-button,
-  &.outlined{
+  &[type="submit"],
+  &::-webkit-file-upload-button,
+  &.outlined {
     width: 225px;
-    padding: 10px
-    heigth: 35px
+    padding: 10px;
+    heigth: 35px;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
   }
   
-  &[type="submit"]{
+  &[type="submit"] {
     background: #7d2eba;
     color: white;
 
@@ -27,15 +27,16 @@ export const InputButton = styled.input<InputButtonProps>`
     }
   }
 
-  &::webkit-file-upload-button,
-  &.outlined{
+  &::-webkit-file-upload-button,
+  &.outlined {
     border: 1px solid #7d2eba;
-    color: 7d2eba;
+    color: #7d2eba;
     background: none;
     font-family: Montserrat;
+    
     margin-right: 30px;
 
-    :hover{
+    :hover {
       background: #7d2eba;
       color: white;
     }

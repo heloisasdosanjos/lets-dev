@@ -17,7 +17,7 @@ const InputButton = ({
   onChange,
   outlined,
   onClick,
-}: InputButtonProps) =>{
+}: InputButtonProps) => {
   return(
     <s.InputButton
       className={outlined ? "outlined" : ""}

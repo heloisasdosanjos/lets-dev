@@ -21,7 +21,7 @@ export const ColumnInput = styled.div`
   textarea{
     border: 1px solid #201e1f;
     padding: 10px;
-    height: 35px;
+    height: 40px;
 
     border-radius: 5px;
 
@@ -31,7 +31,6 @@ export const ColumnInput = styled.div`
   
     select {
       padding: 0 5px;
-      
       cursor: pointer;
     }
 }

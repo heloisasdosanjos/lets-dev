@@ -113,7 +113,7 @@ alert("Cancelando...");
                   </ColumnInput>    
               </Row>
 
-              {/*}Aqui começam os botões de text area e checkbox*/}
+              {/*Aqui começam os botões de text area e checkbox*/}
               <ColumnInput>
                   <Label>Anexar Currículo</Label>
                   <InputButton type="file" name="curriculo"/> {/*Input recebe arquivo*/}
@@ -126,20 +126,33 @@ alert("Cancelando...");
               </ColumnInput>
               
               <ColumnInput style={{marginBottom: '115px'}}>
-                  <div className="row-selectors">
-                      <input type="checkbox" name="receber-email" id="receber-email"/>
-                      <Label htmlFor="receber-email">
-                          Desejo receber notificações sobre vagas por email.</Label>
-                  </div>
+                  <RowSelectors>
+                      <input 
+                      type="checkbox" 
+                      name="receber-email" 
+                      id="receber-email"
+                      />
+                      
+                    <Label htmlFor="receber-email">
+                          Desejo receber notificações sobre vagas por email.
+                    </Label>
+                  </RowSelectors>
               </ColumnInput>   
-                  <Row style={{justifyContent: 'space-between'}}>
-                      <InputButton type="button" onClick={cancelar}value="Cancelar"/>
-                      <InputButton type="submit" value="Enviar"/>
-                  </Row>      
+
+              <Row style={{justifyContent: 'space-between'}}>
+                    <InputButton 
+                    type="button" 
+                    onClick={cancelar}
+                    value= "Cancelar"
+                    outlined
+                    />
+                    
+                    <InputButton type="submit" value="Enviar"/>
+              </Row>      
       </s.Formulario>
     </s.Container>
     </>
-  )
-}
+  );
+};
 
 export default FormCompleto;
