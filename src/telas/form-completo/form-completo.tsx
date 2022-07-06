@@ -3,7 +3,7 @@ import { FormEvent } from 'react';
 import * as s from "./styled-form-completo"
 import {Banner} from '../../imagens';
 import Titulo from '../../componentes/Titulo';
-import { Row, ColumnInput, Label, RowSelectors, InputButton } from '../../componentes';
+import { Row, ColumnInput, Label, RowSelectors, InputButton, Footer } from '../../componentes';
 
 
 const FormCompleto: React.FC = () => {
@@ -151,6 +151,7 @@ alert("Cancelando...");
               </Row>      
       </s.Formulario>
     </s.Container>
+    <Footer/>
     </>
   );
 };
