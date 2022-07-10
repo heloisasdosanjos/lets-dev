@@ -12,8 +12,8 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 90px 40px 90px 40px;
+  max-width: 75rem;
+  padding: 5.625rem 2.5rem 5.625rem 2.5rem;
 `;
 
 export const Banner = styled.div`
@@ -21,12 +21,12 @@ export const Banner = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 50px;
+  padding: 3.125rem;
   background: rgba(35, 31, 32, 0.93);
 
   button{
     background-color: #332F30;
-    width: 45px;
+    width: 2.8125rem;
     color: #8D898A;
     border: 0;
     position: relative;
@@ -64,7 +64,7 @@ export const Banner = styled.div`
   p {
     font-size: 1rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 `;
 
@@ -72,14 +72,14 @@ export const GroupCards = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 100px;
+  gap: 1.25rem;
+  margin-bottom: 6.25rem;
 `;
 
 export const Row = styled.div`
   display: flex;
   width: 100%;
-  gap: 30px;
+  gap: 1.875rem;
 
   img {
     width: 50%;
@@ -100,7 +100,7 @@ export const Column = styled.div`
     font-size: 1.75rem;
     line-height: 1.625rem;
     color: #7d2eba;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
   }
 
   p {
@@ -112,8 +112,8 @@ export const Column = styled.div`
 
   h4{
     font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
   }
 `;
 

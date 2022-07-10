@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.a`
   display: flex;
   flex-direction: column;
-  width: 260px;
+  width: 16.25rem;
 
   a {
     font-weight: 600;

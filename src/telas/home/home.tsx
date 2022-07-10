@@ -87,11 +87,11 @@ const Home = () => {
           <s.Column>
             <h3>Meu nome é Heloisa!</h3>
             <p>
-            🟣Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando tecnologias front-end.<br/>
-            🟣Eu sou formada em arquitetura e urbanismo e apaixonada pela área de tecnologia!<br/>
-            🟣Sou de Porto Alegre/RS!<br/>
-            🟣Tenho facilidade com a área das artes, criatividade e design.<br/>
-            🟣Meus hobbies incluem: cantar, desenhar, cozinhar para os amigos e aprender idiomas.<br/>
+            🟣 -Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando tecnologias front-end.<br/>
+            🟣 -Eu sou formada em arquitetura e urbanismo e apaixonada pela área de tecnologia!<br/>
+            🟣 -Sou de Porto Alegre/RS!<br/>
+            🟣 -Tenho facilidade com a área das artes, criatividade e design.<br/>
+            🟣 -Meus hobbies incluem: cantar, desenhar, cozinhar para os amigos e aprender idiomas.<br/>
             </p>
 
             <h4>Meus contatos:</h4>

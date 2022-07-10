@@ -11,7 +11,7 @@ export const Container = styled.div`
   }
 
   hr {
-    height: 1px;
+    height: 0.0625rem;
     background: #e5e5e5;
     margin: 40px 0 60px 0;
   }

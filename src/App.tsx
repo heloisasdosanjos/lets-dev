@@ -3,6 +3,7 @@
         FormBasico, 
         FormCompleto, 
         Home,
+        SobrePaipers
          } from "./telas";
 
     import {BrowserRouter,
@@ -38,6 +39,7 @@
             <Route path="/form-basico" element={<FormBasico/>}/>
             <Route path="/form-completo" element={<FormCompleto/>}/>
             <Route path="/consumindo-apis" element={<ConsumindoApis/>}/>
+            <Route path="/sobre-paipers" element={<SobrePaipers/>}/>
         </Routes>
         </BrowserRouter>
         </MyContext.Provider>

@@ -12,8 +12,8 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 90px 40px 90px 40px;
+  max-width: 75rem;
+  padding: 5.625rem 2.5rem 5.625rem 2.5rem;
 
   h1 {
     font-style: italic;
@@ -22,7 +22,7 @@ export const Content = styled.div`
     line-height: 3.6875rem;
     text-align: center;
     color: #7d2eba;
-    margin-bottom: 90px;
+    margin-bottom: 5.625rem;
   }
 
   h2 {
@@ -38,12 +38,12 @@ export const Content = styled.div`
     font-size: 1rem;
     line-height: 1.625rem;
     color: #201e1f;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   hr {
     background: #e5e5e5;
-    height: 1px;
+    height: 0.0625rem;
     width: 100%;
     margin: 60px 0 30px 0;
   }
@@ -65,7 +65,7 @@ export const Content = styled.div`
     width: 100%;
 
     li {
-      margin-left: 20px;
+      margin-left: 1.25rem;
       font-weight: 400;
       font-size: 1rem;
       line-height: 2.1875rem;
@@ -87,7 +87,7 @@ export const Content = styled.div`
     line-height: 1.625rem;
     color: #000000;
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 9.375rem;
 
     strong {
       font-weight: 500;
@@ -117,7 +117,7 @@ export const Row = styled.div`
   display: flex;
   align-items: flex-end;
   width: 100%;
-  gap: 30px;
+  gap: 1.875rem;
   margin: 150px 0 40px 0;
 `;
 

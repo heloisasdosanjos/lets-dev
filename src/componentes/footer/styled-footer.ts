@@ -4,16 +4,16 @@ export const Footer = styled.footer`
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.875rem;
   width: 100%;
   background: #231f20;
-  padding: 50px;
+  padding: 3.125rem;
 `;
 
 export const Row = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   a {
     text-decoration: underline;
     color: white;
@@ -25,7 +25,7 @@ export const Column = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-end;
-gap: 10px;
+gap: 0.625rem;
 p{
     color: white;
     text-align: right:

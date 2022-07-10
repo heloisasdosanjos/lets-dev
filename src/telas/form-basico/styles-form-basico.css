@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    padding: 90px;
+    max-width: 75rem;
+    padding: 5.625rem;
 }
 
 #container h1{
     font-weight: 600;
     font-style: italic;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
 }
 
 #container h2{
@@ -19,19 +19,19 @@
 
 #container p #instrucao{
     text-align: center;
-    margin: 20px 0 60px 0;
+    margin: 1.25rem 0 3.75rem 0;
 }
 
 #container img{
-    max-width: 600px;
-    margin-top: 35px;
+    max-width: 37.5rem;
+    margin-top: 2.1875rem;
 }
 
 #container hr{
     background-color: #e5e5e5;
-    height: 1px;
+    height: 0.0625rem;
     width: 100%;
-    margin: 100px 0 35px 0;
+    margin: 6.25rem 0 2.1875rem 0;
 }
 
 #container form{
@@ -42,7 +42,7 @@
 
 form p#aviso{
     font-weight: 500;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 }
 
 form p#aviso strong{
@@ -52,8 +52,8 @@ form p#aviso strong{
 form div.column-input{
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-bottom: 70px;
+    gap: 1.5625rem;
+    margin-bottom: 4.375rem;
 }
 
 form label{
@@ -68,25 +68,25 @@ textarea,
 button{
     /*Padroniza o escrito dos inputs*/
     border: 1px solid;
-    padding: 10px;
-    height: 35px;
+    padding: 0.625rem;
+    height: 2.1875rem;
 }
 
 form .row{
     /*Alinha horizontalmente*/
     display: flex;
     width: 100%;
-    gap: 60px;
+    gap: 3.75rem;
 }
 
 .column-input.input-text{
     /*Faz o input usar 50% do container dele*/
     width: 50%;
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .column-input{
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .column-input.select{
@@ -96,20 +96,20 @@ form .row{
 
 .column-input.select select{
     /*Ajusta o espaçamento, pois o padrão bagunça somente o select*/
-    padding: 0 5px;
+    padding: 0 0.3125rem;
 }
 
 form .row-selectors {
     /*Alinha os radio buttons com seus respectivos labels*/
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 form .row-selectors input[type="radio"] {
     /*Aumenta o tamanho dos radio buttons*/
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
 }
 
 form .row-selectors label{
@@ -118,12 +118,12 @@ form .row-selectors label{
 }
 
 form textarea{
-    min-height: 100px;
-    max-height: 200px;
+    min-height: 6.25rem;
+    max-height: 12.5rem;
     min-width: 50%;
     max-width: 100%;
 }
 
 form button{
-    padding: 3px 40px;
+    padding: 3px 2.5rem;
 }
