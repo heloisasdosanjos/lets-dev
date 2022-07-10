@@ -24,6 +24,17 @@ export const Banner = styled.div`
   padding: 50px;
   background: rgba(35, 31, 32, 0.93);
 
+  button{
+    background-color: #332F30;
+    width: 45px;
+    color: #8D898A;
+    border: 0;
+    position: relative;
+    right: -49%;
+    top: -18%;
+
+  }
+
   h1 {
     font-style: italic;
     font-weight: 700;

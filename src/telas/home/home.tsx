@@ -7,8 +7,13 @@ import {
   InputButton,
 } from "../../componentes";
 import { Logo } from "../../imagens";
+import { useContext } from "react";
+import { MyContext } from "../../contexto";
 
 const Home = () => {
+
+  const { setNomeUsuario, nomeUsuario } = useContext(MyContext);
+
   const telas = [
     {
       titulo: "Formulário em HTML e CSS",
@@ -48,7 +53,10 @@ const Home = () => {
     <s.Container>
       <Header />
       <s.Banner>
-        <h1>Que prazer te ver aqui, Fulano!</h1>
+        <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
+        <button onClick={() => localStorage.removeItem('nomeUsuario')}>
+          Sair
+        </button>
         <img src={Logo} />
         <h2>
           Seja bem-vindo(a) ao Let’s Dev! O evento que vai transformar sua
@@ -95,7 +103,7 @@ const Home = () => {
                 value="LinkedIn"
                 onClick={() => {
                   //Aqui vai o seu perfil do linkedIn
-                  window.open("https://www.linkedin.com", "_blank");
+                  window.open("https://www.linkedin.com/heloisadosanjos", "_blank");
                 }}
               />
               <InputButton
@@ -103,7 +111,7 @@ const Home = () => {
                 value="Ver perfil"
                 onClick={() => {
                   //Aqui vai o seu perfil do GitHub
-                  window.open("https://github.com", "_blank");
+                  window.open("https://github.com/heloisasdosanjos", "_blank");
                 }}
               />
             </s.ButtonGroup>
