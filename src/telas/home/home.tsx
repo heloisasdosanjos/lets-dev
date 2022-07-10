@@ -6,7 +6,7 @@ import {
   Card,
   InputButton,
 } from "../../componentes";
-import { Logo } from "../../imagens";
+import { ImagemPerfil, Logo } from "../../imagens";
 import { useContext } from "react";
 import { MyContext } from "../../contexto";
 
@@ -54,7 +54,7 @@ const Home = () => {
       <Header />
       <s.Banner>
         <h1>Que prazer te ver aqui, {nomeUsuario}!</h1>
-        <button onClick={() => localStorage.removeItem('nomeUsuario')}>
+        <button onClick ={() => localStorage.removeItem('nomeUsuario')}>
           Sair
         </button>
         <img src={Logo} />
@@ -83,19 +83,19 @@ const Home = () => {
         <TituloSecao titulo="Um pouco sobre mim..." />
 
         <s.Row>
-          <img src={Logo} />
+          <img src={ImagemPerfil} alt="Imagem de perfil da aluna." />
           <s.Column>
-            <h3>Aqui vai o nome do(a) Dev</h3>
+            <h3>Meu nome é Heloisa!</h3>
             <p>
-              Este espaço é destinado à sua descrição de perfil. Conta aqui quem
-              você é, gostos, hobbies e o que achar interessante. Descreve
-              também as características profissionais e o que te motivou a
-              ingressar na área do desenvolviemento de software.
+            🟣Atualmente estou cursando Análise e Desenvolvimento de Sistemas e estudando tecnologias front-end.<br/>
+            🟣Eu sou formada em arquitetura e urbanismo e apaixonada pela área de tecnologia!<br/>
+            🟣Sou de Porto Alegre/RS!<br/>
+            🟣Tenho facilidade com a área das artes, criatividade e design.<br/>
+            🟣Meus hobbies incluem: cantar, desenhar, cozinhar para os amigos e aprender idiomas.<br/>
             </p>
-            <p>
-              Você pode substituir a foto a lado pela sua melhor foto e colocar
-              suas redes nos botões abaixo!
-            </p>
+
+            <h4>Meus contatos:</h4>
+
             <s.ButtonGroup>
               <InputButton
                 outlined
@@ -103,16 +103,38 @@ const Home = () => {
                 value="LinkedIn"
                 onClick={() => {
                   //Aqui vai o seu perfil do linkedIn
-                  window.open("https://www.linkedin.com/heloisadosanjos", "_blank");
+                  window.open("https://www.linkedin.com/in/heloisadosanjos/", "_blank");
                 }}
+                title="Acessa o perfil do LinkedIn."
               />
               <InputButton
                 type="submit"
-                value="Ver perfil"
+                value="GitHub"
                 onClick={() => {
                   //Aqui vai o seu perfil do GitHub
                   window.open("https://github.com/heloisasdosanjos", "_blank");
                 }}
+                title="Acessa o perfil do GitHub."
+              />
+              <InputButton
+                outlined
+                type="button"
+                value="Email"
+                onClick={() => {
+                  //Aqui vai o seu perfil do linkedIn
+                  window.open("mailto:heloisasdosanjos@gmail.com");
+                }}
+                title="Envia um email."
+              />
+              <InputButton
+                outlined
+                type="button"
+                value="Instagram"
+                onClick={() => {
+                  //Aqui vai o seu perfil do linkedIn
+                  window.open("https://www.instagram.com/heloisadosanjos/", "_blank");
+                }}
+                title="Acessa o instagram."
               />
             </s.ButtonGroup>
           </s.Column>

@@ -6,6 +6,7 @@ import CardFormBasico from "./card-form-basico.png";
 import CardFormCompleto from "./card-form-completo.png";
 import CardApi from "./card-api.png";
 import CardPaipers from "./card-paipers.png";
+import ImagemPerfil from "../../src/imagens/imagem-perfil.png";
 
 
 export { 
@@ -14,8 +15,8 @@ export {
   CardFormBasico,
   CardFormCompleto,
   CardPaipers,
+  ImagemPerfil,
   Logo, 
   LogoPaipe, 
   LogoLetsDev,
-  
  };

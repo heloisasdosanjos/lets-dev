@@ -29,7 +29,7 @@ const [receberEmail, setReceberEmail] = useState(false);
 
 const cancelar =(event: FormEvent) =>{
 event.preventDefault();
-alert("Cancelando...");
+window.location.href="/";
 };
 
 useEffect(() => {

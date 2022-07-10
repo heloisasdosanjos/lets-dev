@@ -38,8 +38,8 @@ export const Banner = styled.div`
   h1 {
     font-style: italic;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 59px;
+    font-size: 3rem;
+    line-height: 3.6875rem;
     text-align: center;
     color: #ffffff;
   }
@@ -52,17 +52,17 @@ export const Banner = styled.div`
   h2,
   p {
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
     color: #ffffff;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   p {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     margin-top: 10px;
   }
@@ -84,6 +84,10 @@ export const Row = styled.div`
   img {
     width: 50%;
   }
+
+  @media (max-width: 767px){
+    flex-wrap: wrap;
+  }
 `;
 
 export const Column = styled.div`
@@ -93,16 +97,23 @@ export const Column = styled.div`
 
   h3 {
     font-weight: 600;
-    font-size: 28px;
-    line-height: 26px;
+    font-size: 1.75rem;
+    line-height: 1.625rem;
     color: #7d2eba;
+    margin-bottom: 15px;
   }
 
   p {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #201e1f;
+  }
+
+  h4{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `;
 
