@@ -48,7 +48,7 @@ Esta página redireciona para todos os links da aplicação e faz uma breve apre
 <div>
 <br>
 <div>
-<h2>2 - Tela de Apresentação dos Professores deste Módulo</h2>
+<h2>5 - Tela de Apresentação dos Professores deste Módulo</h2>
 <p>Apresenta os desenvolvedores responsáveis por criar as aulas e exercícios, fala um pouco sobre a empresa que ofereceu este programa de aprendizado e adiciona botões que direcionam para links de contato da empresa/professores</p>
 
 <img align="center" width="50%" src="https://github.com/heloisasdosanjos/lets-dev/blob/main/src/aula2/paipers.png"/>
