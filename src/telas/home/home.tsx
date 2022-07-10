@@ -9,6 +9,7 @@ import {
 import { ImagemPerfil, Logo } from "../../imagens";
 import { useContext } from "react";
 import { MyContext } from "../../contexto";
+import { CardFormBasico, CardApi, CardFormCompleto, CardPaipers } from "../../imagens";
 
 const Home = () => {
 
@@ -18,8 +19,10 @@ const Home = () => {
     {
       titulo: "Formulário em HTML e CSS",
       link: "/form-basico",
+      
       descricao: (
         <p>
+          <img src={CardFormBasico} alt="Imagem Let's Dev - Formulário Básico"/>
           O primeiro <i>“Hello World”</i> a gente nunca esquece. O primeiro
           formulário feito na aula de Introdução ao HTML e CSS.
         </p>
@@ -30,6 +33,7 @@ const Home = () => {
       link: "/form-completo",
       descricao: (
         <p>
+          <img src={CardFormCompleto} alt="Imagem Let's Dev - Formulário Completo"/>
           O primeiro <i>“console.log”</i> a gente também não esquece. O
           formulário funcional e agora com React JS + HTML + CSS.
         </p>
@@ -38,14 +42,18 @@ const Home = () => {
     {
       titulo: "Consumindo API's",
       link: "/consumindo-apis",
-      descricao:
-        "Brincando com a API viaCEP, informando um CEP, salvando os valores digitados no estado e mostrando os dados na tela.",
+      descricao: (
+        <p>
+          <img src={CardApi} alt="Imagem Let's Dev - Api"/>
+          "Brincando com a API viaCEP, informando um CEP, salvando os valores digitados no estado e mostrando os dados na tela.",</p>),
     },
     {
       titulo: "A PAIPE e os Paipers",
       link: "/sobre-paipers",
-      descricao:
-        "Uma página bônus de presente para deixar o seu projeto ainda mais completo. E de quebra ficar por dentro do que acontece na Paipe.",
+      descricao: (
+        <p>   
+          <img src={CardPaipers} alt="Imagem Let's Dev - Sobre os Paipers"/>
+          "Uma página bônus de presente para deixar o seu projeto ainda mais completo. E de quebra ficar por dentro do que acontece na Paipe."</p>),
     },
   ];
 

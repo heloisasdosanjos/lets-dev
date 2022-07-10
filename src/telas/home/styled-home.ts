@@ -74,6 +74,11 @@ export const GroupCards = styled.div`
   flex-wrap: wrap;
   gap: 1.25rem;
   margin-bottom: 6.25rem;
+
+  img{
+    max-width: 100%;
+
+  }
 `;
 
 export const Row = styled.div`
